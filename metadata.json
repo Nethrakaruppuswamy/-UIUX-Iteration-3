@@ -1,0 +1,5 @@
+{
+  "name": "MediCare Reminder",
+  "description": "An elder-friendly medication reminder app with high contrast, large touch targets, and real-time overdue alerts.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,500;0,600;1,400&display=swap');
+
+:root {
+  --bg: #f0f7fe;
+  --blue: #2b7cb5;
+  --blue-dark: #1a5a8a;
+  --blue-light: #3a9fd8;
+  --teal: #2aaa8a;
+  --teal-light: #d0f0e8;
+  --coral: #e8614a;
+  --coral-light: #fde8e4;
+  --amber: #f0a832;
+  --amber-light: #fef3da;
+  --lavender: #8b6fc4;
+  --lavender-light: #ede8f8;
+  --sky: #e8f4fd;
+  --sky-mid: #c5e3f7;
+  --white: #ffffff;
+  --text: #1a2f42;
+  --text-mid: #4a6580;
+  --text-light: #7a96ae;
+  --shadow: 0 4px 24px rgba(43,124,181,0.10);
+  --radius: 20px;
+  --radius-lg: 28px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes pulse-alarm {
+  0% { box-shadow: 0 6px 24px rgba(232,97,74,0.3); }
+  50% { box-shadow: 0 6px 32px rgba(232,97,74,0.55); }
+  100% { box-shadow: 0 6px 24px rgba(232,97,74,0.3); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-12deg); }
+  75% { transform: rotate(12deg); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-pulse-alarm {
+  animation: pulse-alarm 2s infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s infinite;
+}
+
+.animate-fade-slide-in {
+  animation: fadeSlideIn 0.4s ease forwards;
+}
+
+/* Custom scrollbar for better visibility */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sky-mid);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-light);
+}
